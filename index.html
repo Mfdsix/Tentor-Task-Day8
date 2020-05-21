@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data Covid Indonesia</title>
+	<link rel="stylesheet" type="text/css" href="css/particles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<div class="loading">
+	<div class="lds-circle"></div>
+</div>
+
+<section>
+	<h1>Pangkalan Data Covid Nasional</h1>
+
+	<div class="row">
+		<div class="col bg-warning">
+			<i class="fas fa-virus"></i>
+			<h3>Positif</h3>
+			<p class="count" id="positive">200</p>
+		</div>
+		<div class="col bg-success">
+			<i class="fas fa-shield-virus"></i>
+			<h3>Sembuh</h3>
+			<p class="count" id="recovered">200</p>
+		</div>
+		<div class="col bg-danger">
+			<i class="fas fa-lungs-virus"></i>
+			<h3>Meninggal</h3>
+			<p class="count" id="death">200</p>
+		</div>
+	</div>
+	<p class="update">* Update terakhir : <span id="update"></span></p>
+
+	<hr>
+
+	<div class="button-group">
+		<button class="btn bg-success" id="btn-reload"><i class="fas fa-redo-alt"></i> Muat Ulang</button>
+		<button class="btn bg-warning" id="btn-format"><i class="fas fa-edit"></i> Ubah Format</button>
+	</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/moment-with-locales.min.js"></script>
+
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
