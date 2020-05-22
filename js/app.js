@@ -3,12 +3,13 @@ var formats = ['0.0a', '0,0'];
 var positive = 0;
 var recovered = 0;
 var death = 0;
-var format = 1;
+var format = 0;
 
 $(document).ready(function(){
 	consumeApi();
 
 	$("#btn-format").on("click", function(){
+		format = (format+1) % 2;
 		printCount();
 	});
 
@@ -46,7 +47,6 @@ function showPage(){
 }
 
 function printCount(){
-	format = (format+1) % 2;
 	$("#positive").text(numeral(positive).format(formats[format]));
 	$("#recovered").text(numeral(recovered).format(formats[format]));
 	$("#death").text(numeral(death).format(formats[format]));

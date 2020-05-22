@@ -115,3 +115,22 @@ hr{
 	padding: 10px 20px;
 	border-radius: 5px;
 }
+.btn:hover{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+	.row{
+		flex-wrap: wrap;
+	}
+	.row .col{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.button-group{
+		text-align: center;
+	}
+	.btn{
+		margin-bottom: 10px;
+	}
+}
