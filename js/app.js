@@ -32,10 +32,10 @@ function consumeApi(){
 			printCount();
 			showPage();
 		}else{
-			alert("Failed");
+			showError();
 		}
 	}).catch(function(error){
-		alert("error");
+		showError();
 	});
 }
 
@@ -46,6 +46,13 @@ function showPage(){
 	loadParticle();
 }
 
+function showError(){
+	$(".loading").fadeOut(2000);
+	$("#particles").fadeIn(3000);
+	$("#error").delay(2000).fadeIn(2000);
+	loadParticle();	
+}
+
 function printCount(){
 	$("#positive").text(numeral(positive).format(formats[format]));
 	$("#recovered").text(numeral(recovered).format(formats[format]));
@@ -53,6 +60,7 @@ function printCount(){
 }
 
 function loading(){
+	$("#error").hide();
 	$("body").css('display', 'block');
 	$(".loading").show();
 	$("#particles").hide();

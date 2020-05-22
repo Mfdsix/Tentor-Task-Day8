@@ -119,6 +119,32 @@ hr{
 	cursor: pointer;
 }
 
+#error{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 30px;
+	position: relative;
+	padding: 50px;
+	margin: 50px 15%;
+	z-index: 999;
+	overflow: hidden;
+}
+#error i{
+	color: rgba(173, 12, 28, 0.5);
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	font-size: 150px;
+}
+#error h3{
+	font-size: 35px;
+	color: red;
+	margin-left: 95px;
+}
+#error p{
+	margin-left: 125px;
+}
+
 @media screen and (max-width: 600px){
 	.row{
 		flex-wrap: wrap;
@@ -132,5 +158,11 @@ hr{
 	}
 	.btn{
 		margin-bottom: 10px;
+	}
+	#error i{
+		display: none;
+	}
+	#error h3, #error p{
+		margin-left: 0;
 	}
 }
